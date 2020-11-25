@@ -1,0 +1,237 @@
+// app global css in SCSS form
+
+@font-face{
+  font-family: 'Roboto Mono';
+  src: url($mono-font-path)
+}
+
+.custom-standout {
+  &.q-field--standout,
+  &.q-field--standout.q-field--focused {
+    .q-field__native,
+    .q-field__prefix,
+    .q-field__suffix,
+    .q-field__prepend,
+    .q-field__append,
+    .q-field__input {
+      color: $light;
+    }
+  }
+}
+
+.body--dark {
+  .q-table__card {
+    box-shadow: none;
+  }
+}
+
+.hidden-canvas {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.link {
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  } 
+}
+
+a:not(.q-item) {
+  &,
+  &:visited,
+  &:hover {
+    color: $dark;
+
+    .body--dark & {
+      color: $text-color-1;
+    }  
+  }
+}
+
+.q-card {
+  .body--light & {
+    box-shadow: $shadow-soft;
+  }
+
+  .body--dark & {
+    box-shadow: none;
+  }
+}
+
+.vjs-tree,
+.wrap {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+// custom vue-json-pretty style
+.vjs-tree.is-mouseover {
+  .body--dark & {
+    background-color: $grey-9;
+  }
+}
+.vjs-tree {
+  font-size: 12px !important;
+}
+
+.q-drawer--on-top {
+  z-index: 2999;
+}
+
+.sticky-header-table {
+  height: 100%;
+  /* height or max-height is important */
+
+  .q-table__top,
+  .q-table__bottom,
+  thead tr:first-child th {
+    /* bg color is important for th; just specify one */
+    background-color: $light;
+
+    .body--dark & {
+      background-color: $dark;
+    }
+  }
+
+  thead tr th {
+    position: sticky;
+    z-index: 1;
+  }
+  thead tr:first-child th {
+    top: 0;
+  }
+
+  /* this is when the loading indicator appears */
+  &.q-table--loading:not(.custom-loading) {
+    /* height of all previous header rows */
+    thead tr:last-child th {
+      top: 48px;
+    }
+
+    &.q-table--dense thead tr:last-child th {
+      top: 28px;
+    }
+  }
+}
+
+.player-table {
+  .player-table-bottom {
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .q-table__bottom {
+    align-items: center;
+    padding: 0px 16px;
+  }
+}
+
+.roboto-mono {
+  font-family: 'Roboto Mono'
+}
+
+.shadow-soft {
+  box-shadow: $shadow-soft;
+}
+
+th {
+  color: $accent-2;
+
+  .body--dark & {
+    color: $accent;
+  }
+}
+
+.text-color-1 {
+  color: $text-color-1 !important;
+}
+
+.text-color-2 {
+  color: $text-color-2 !important;
+}
+
+.q-item__section--avatar {
+  min-width: unset;
+}
+
+.bg-light {
+  background: $bg-light;
+}
+
+.text-positive {
+  color: $positive !important;
+}
+
+.text-negative {
+  color: $negative !important;
+}
+
+.flex-grow-y {
+  height: 1px;
+  flex-grow: 1;
+}
+
+.flex-grow-x {
+  width: 1px;
+  min-width: 0;
+  flex: 1;
+}
+
+.bg-dark-2 {
+  background-color: $dark-2 !important;
+}
+
+.break-word {
+  // overflow-wrap: break-word;
+  // display: inline-block;
+  word-break: break-word;
+}
+
+.grid-fill-200 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: .6rem;
+}
+
+.grid-fill-270 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: .6rem;
+}
+
+.q-tab-panels.q-dark {
+  background-color: $dark-2;
+}
+
+.my-col-1 {
+  width: 20%;
+}
+
+.my-col-2 {
+  width: 40%;
+}
+
+.my-col-3 {
+  width: 60%;
+}
+
+.my-col-4 {
+  width: 80%;
+}
+
+.bg-transparent {
+  background: $bg-transparent !important;
+}
+
+.my-primary {
+  background-color: $warning;
+
+  .body--dark & {
+    background-color: $accent;
+  }
+}
