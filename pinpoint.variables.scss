@@ -1,0 +1,76 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+$mono-font-path: '~assets/fonts/RobotoMono-VariableFont_wght.ttf';
+
+$primary         : #6202EE;
+$secondary       : #9E54FC;
+// $primary-1       : #E8E8E8;
+// $primary-2       : #A8A5C6;
+// $primary-3       : #BB86FC;
+// $primary-4       : #9E54FC;
+// $primary-5       : #7F22FD;
+// $primary-6       : #6202EE;
+// $primary-7       : #4B01D1;
+// $primary-8       : #3700B3;
+// $primary-9       : #1B1A3B;
+// $primary-10      : #190078;
+
+$deep-purple     : #6202EE;
+$deep-purple-1   : #E8E8E8;
+$deep-purple-2   : #A8A5C6;
+$deep-purple-3   : #BB86FC;
+$deep-purple-4   : #9E54FC;
+$deep-purple-5   : #7F22FD;
+$deep-purple-6   : #6202EE;
+$deep-purple-7   : #4B01D1;
+$deep-purple-8   : #3700B3;
+$deep-purple-9   : #1B1A3B;
+$deep-purple-10  : #190078;
+
+
+
+// $secondary   : #01A39D;
+// $secondary-1 : #86FFEA;
+// $secondary-2 : #4FFEE4;
+// $secondary-3 : #18FDE1;
+// $secondary-4 : #03DAC6;
+// $secondary-5 : #02BEB2;
+// $secondary-6 : #01A39D;
+// $secondary-7 : #018786;
+// $secondary-8 : #00696B;
+// $secondary-9 : #004B4F;
+// $secondary-10: #002F33;
+
+$accent      : #50E3C2;
+$accent-1    : #50E3C2;
+$accent-2    : #00C498;
+$dark        : #17163B;
+$dark-page   : #201D47;
+
+$dark-2      : #201D47;
+
+// $positive    : #45E521;
+// $negative    : #C10015;
+$negative    : #FF5252;
+$info        : #31CCEC;
+$warning     : #F2C037;
+
+$shadow-soft: 0 1px 15px 0 hsla(0,0%,48.2%,.15);
+$table-box-shadow: $shadow-soft;
+
+$text-color-1: #A8A5C6;
+$text-color-2: #7D7B92;
+
+$bg-light: rgba(52, 50, 97, 0.35);
