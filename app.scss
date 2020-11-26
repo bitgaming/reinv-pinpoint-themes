@@ -5,6 +5,11 @@
   src: url($mono-font-path)
 }
 
+body.body--dark {
+  color: var(--q-color-font-color--dark, #{$light});
+  background: var(--q-color-dark-page, #{$dark-page});
+}
+
 .custom-standout {
   &.q-field--standout,
   &.q-field--standout.q-field--focused {
@@ -93,7 +98,7 @@ a:not(.q-item) {
     background-color: $light;
 
     .body--dark & {
-      background-color: $dark;
+      background-color: var(--q-color-dark, #{$dark});
     }
   }
 
@@ -159,10 +164,6 @@ th {
   min-width: unset;
 }
 
-.bg-light {
-  background: $bg-light;
-}
-
 .text-positive {
   color: $positive !important;
 }
@@ -205,7 +206,8 @@ th {
 }
 
 .q-tab-panels.q-dark {
-  background-color: $dark-2;
+  // background-color: $dark-2;
+  background-color: var(--q-color-dark-page, $dark-page);
 }
 
 .my-col-1 {
@@ -226,6 +228,10 @@ th {
 
 .bg-transparent {
   background: $bg-transparent !important;
+
+  .body--dark & {
+    background: $bg-transparent-dark !important;
+  }
 }
 
 .my-primary {
