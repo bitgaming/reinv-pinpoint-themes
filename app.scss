@@ -183,10 +183,6 @@ th {
   flex: 1;
 }
 
-.bg-dark-2 {
-  background-color: $dark-2 !important;
-}
-
 .break-word {
   // overflow-wrap: break-word;
   // display: inline-block;
@@ -206,7 +202,6 @@ th {
 }
 
 .q-tab-panels.q-dark {
-  // background-color: $dark-2;
   background-color: var(--q-color-dark-page, $dark-page);
 }
 

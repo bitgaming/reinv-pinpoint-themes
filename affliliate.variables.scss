@@ -14,9 +14,6 @@
 
 $mono-font-path: '~assets/fonts/RobotoMono-VariableFont_wght.ttf';
 
-$primary         : #6202EE;
-$secondary       : #9E54FC;
-
 $deep-purple     : #6202EE;
 $deep-purple-1   : #E8E8E8;
 $deep-purple-2   : #A8A5C6;
@@ -29,12 +26,15 @@ $deep-purple-8   : #3700B3;
 $deep-purple-9   : #1B1A3B;
 $deep-purple-10  : #190078;
 
+$primary         : #6202EE;
+$secondary       : #9E54FC;
 $accent      : #50E3C2;
 $accent-1    : #50E3C2;
 $accent-2    : #00C498;
-$dark        : #17163B;
-$dark-page   : #201D47;
-$dark-2      : #201D47;
+// $dark        : #17163B;
+// $dark-page   : #201D47;
+$dark        : #1a1a1a;
+$dark-page   : #141414;
 $light       : #ffffff;
 
 // $positive    : #45E521;
@@ -43,68 +43,11 @@ $negative    : #FF5252;
 $info        : #31CCEC;
 $warning     : #F2C037;
 
-$red-dark                 : #421c1c;
-$red-dark-page            : #520c0c;
-
-$pink-dark                : #3b1928;
-$pink-dark-page           : #4e082e;
-
-$purple-dark              : #251330;
-$purple-dark-page         : #291344;
-
-$deep-purple-dark         : #17163B;
-$deep-purple-dark-page    : #201D47;
-
-$indigo-dark              : #1b1f3d;
-$indigo-dark-page         : #121641;
-
-$blue-dark                : #233952;
-$blue-dark-page           : #1b3357;
-
-$light-blue-dark          : #13232c;
-$light-blue-dark-page     : #193850;
-
-$cyan-dark                : #1c383b;
-$cyan-dark-page           : #165355;
-
-$teal-dark                : #14332f;
-$teal-dark-page           : #194e45;
-
-$green-dark               : #133514;
-$green-dark-page          : #134617;
-
-$light-green-dark         : #233a13;
-$light-green-dark-page    : #244b15;
-
-$lime-dark                : #38380c;
-$lime-dark-page           : #49430d;
-
-$yellow-dark              : #412b09;
-$yellow-dark-page         : #5c2f08;
-
-$amber-dark               : #3a2100;
-$amber-dark-page          : #612b02;
-
-$orange-dark              : #4b2200;
-$orange-dark-page         : #6e2700;
-
-$deep-orange-dark         : #461506;
-$deep-orange-dark-page    : #5a1906;
-
-$brown-dark               : #251916;
-$brown-dark-page          : #3b2521;
-
-$grey-dark                : #222222;
-$grey-dark-page           : #353535;
-
-$blue-grey-dark           : #20292e;
-$blue-grey-dark-page      : #2d3d44;
-
 $shadow-soft: 0 1px 15px 0 hsla(0,0%,48.2%,.15);
 $table-box-shadow: $shadow-soft;
 
-$text-color-1: #A8A5C6;
-$text-color-2: #7D7B92;
+$text-color-1: #c5c5c5;
+$text-color-2: #929292;
 
 $bg-transparent: rgba(0, 0, 0, 0.07);
 $bg-transparent-dark: rgba(255, 255, 255, 0.07);
