@@ -58,10 +58,6 @@ a:not(.q-item) {
 }
 
 .q-card {
-  .body--light & {
-    box-shadow: $shadow-soft;
-  }
-
   .body--dark & {
     box-shadow: none;
   }
@@ -138,10 +134,6 @@ a:not(.q-item) {
 
 .roboto-mono {
   font-family: 'Roboto Mono'
-}
-
-.shadow-soft {
-  box-shadow: $shadow-soft;
 }
 
 th {
@@ -221,11 +213,11 @@ th {
   width: 80%;
 }
 
-.bg-transparent {
-  background: $bg-transparent !important;
+.bg-half-transparent {
+  background: $bg-half-transparent !important;
 
   .body--dark & {
-    background: $bg-transparent-dark !important;
+    background: $bg-half-transparent-dark !important;
   }
 }
 

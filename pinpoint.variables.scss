@@ -43,11 +43,8 @@ $negative    : #FF5252;
 $info        : #31CCEC;
 $warning     : #F2C037;
 
-$shadow-soft: 0 1px 15px 0 hsla(0,0%,48.2%,.15);
-$table-box-shadow: $shadow-soft;
-
-$text-color-1: #c5c5c5;
+$text-color-1: #b1b1b1;
 $text-color-2: #929292;
 
-$bg-transparent: rgba(0, 0, 0, 0.07);
-$bg-transparent-dark: rgba(255, 255, 255, 0.07);
+$bg-half-transparent: rgba(0, 0, 0, 0.1);
+$bg-half-transparent-dark: rgba(255, 255, 255, 0.1);
