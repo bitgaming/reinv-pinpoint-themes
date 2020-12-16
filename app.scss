@@ -5,6 +5,11 @@
   src: url($mono-font-path)
 }
 
+body.body--dark {
+  color: var(--q-color-font-color--dark, #{$light});
+  background: var(--q-color-dark-page, #{$dark-page});
+}
+
 .custom-standout {
   &.q-field--standout,
   &.q-field--standout.q-field--focused {
@@ -53,10 +58,6 @@ a:not(.q-item) {
 }
 
 .q-card {
-  .body--light & {
-    box-shadow: $shadow-soft;
-  }
-
   .body--dark & {
     box-shadow: none;
   }
@@ -93,7 +94,7 @@ a:not(.q-item) {
     background-color: $light;
 
     .body--dark & {
-      background-color: $dark;
+      background-color: var(--q-color-dark, #{$dark});
     }
   }
 
@@ -118,25 +119,14 @@ a:not(.q-item) {
   }
 }
 
-.player-table {
-  .player-table-bottom {
-    align-items: center;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
-
-  .q-table__bottom {
-    align-items: center;
-    padding: 0px 16px;
-  }
-}
-
 .roboto-mono {
-  font-family: 'Roboto Mono'
+  font-family: $mono-font-family;
+  letter-spacing: -0.12px;
 }
 
-.shadow-soft {
-  box-shadow: $shadow-soft;
+.roboto-mono--important {
+  font-family: $mono-font-family !important;
+  letter-spacing: -0.12px !important;
 }
 
 th {
@@ -159,10 +149,6 @@ th {
   min-width: unset;
 }
 
-.bg-light {
-  background: $bg-light;
-}
-
 .text-positive {
   color: $positive !important;
 }
@@ -180,10 +166,6 @@ th {
   width: 1px;
   min-width: 0;
   flex: 1;
-}
-
-.bg-dark-2 {
-  background-color: $dark-2 !important;
 }
 
 .break-word {
@@ -205,7 +187,7 @@ th {
 }
 
 .q-tab-panels.q-dark {
-  background-color: $dark-2;
+  background-color: var(--q-color-dark-page, $dark-page);
 }
 
 .my-col-1 {
@@ -224,8 +206,16 @@ th {
   width: 80%;
 }
 
-.bg-transparent {
-  background: $bg-transparent !important;
+.bg-half-transparent {
+  background: $bg-half-transparent !important;
+
+  .body--dark & {
+    background: $bg-half-transparent-dark !important;
+  }
+}
+
+.bg-half-transparent--dark {
+  background: $bg-half-transparent-dark !important;
 }
 
 .my-primary {
@@ -234,4 +224,13 @@ th {
   .body--dark & {
     background-color: $accent;
   }
+}
+
+.main-card {
+  max-width: 1100px;
+}
+
+.dialog-form-card {
+  width: 700px;
+  max-width: 80vw !important;
 }
