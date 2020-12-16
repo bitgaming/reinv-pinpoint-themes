@@ -120,7 +120,13 @@ a:not(.q-item) {
 }
 
 .roboto-mono {
-  font-family: 'Roboto Mono'
+  font-family: $mono-font-family;
+  letter-spacing: -0.12px;
+}
+
+.roboto-mono--important {
+  font-family: $mono-font-family !important;
+  letter-spacing: -0.12px !important;
 }
 
 th {
@@ -226,5 +232,5 @@ th {
 
 .dialog-form-card {
   width: 700px;
-  max-width: 80vw;
+  max-width: 80vw !important;
 }
