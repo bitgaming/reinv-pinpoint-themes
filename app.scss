@@ -130,12 +130,20 @@ a:not(.q-item) {
 }
 
 th {
-  color: $accent-2;
+  color: $grey-8;
 
   .body--dark & {
-    color: $accent;
+    color: $grey-3;
   }
 }
+
+// td, .my-td  {
+//   color: $grey-7;
+
+//   .body--dark & {
+//     color: $grey-5;
+//   }
+// }
 
 .text-color-1 {
   color: $text-color-1 !important;
@@ -249,11 +257,24 @@ th {
   }
 }
 
-.my-btn.q-btn--outline .q-btn__wrapper:before {
+.my-btn.q-btn--outline .q-btn__wrapper:before,
+td,
+.my-gray {
   border-color: rgba($color: #000000, $alpha: .3);
+  color: $grey-7;
+
   .body--dark & {
     border-color: rgba($color: #ffffff, $alpha: .3);
+    color: $grey-5;
   }
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+.font-size-12--important {
+  font-size: 12px !important;
+  font-weight: 700 !important;
 }
 
 .px-38 {
