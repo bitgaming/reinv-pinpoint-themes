@@ -129,7 +129,8 @@ a:not(.q-item) {
   letter-spacing: -0.12px !important;
 }
 
-th {
+.q-table th {
+  font-size: 14px;
   color: $grey-8;
 
   .body--dark & {
@@ -327,4 +328,8 @@ td,
 
 .mb-38 {
   margin-bottom: 38px;
+}
+
+.min-height-unset {
+  min-height: unset;
 }
