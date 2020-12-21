@@ -138,6 +138,10 @@ a:not(.q-item) {
   }
 }
 
+.q-table tbody td {
+  font-size: 14px;
+}
+
 // td, .my-td  {
 //   color: $grey-7;
 
@@ -332,4 +336,10 @@ td,
 
 .min-height-unset {
   min-height: unset;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
 }
