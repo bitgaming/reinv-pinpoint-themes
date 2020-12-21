@@ -337,3 +337,9 @@ td,
 .min-height-unset {
   min-height: unset;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
