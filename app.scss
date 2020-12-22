@@ -42,18 +42,15 @@ body.body--dark {
   &:hover,
   &:active {
     text-decoration: underline;
-  } 
+  }
 }
 
-a:not(.q-item) {
-  &,
-  &:visited,
-  &:hover {
-    color: $dark;
-
-    .body--dark & {
-      color: $text-color-1;
-    }  
+a:not(.q-item), .link {
+  color: $anchor-color;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    text-decoration: underline;
   }
 }
 
@@ -271,6 +268,13 @@ td,
   .body--dark & {
     border-color: rgba($color: #ffffff, $alpha: .3);
     color: $grey-5;
+  }
+}
+
+.black-white {
+  color: #000;
+  .body--dark & {
+    color: #fff;
   }
 }
 
