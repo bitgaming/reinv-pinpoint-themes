@@ -36,18 +36,14 @@ body.body--dark {
   height: 0;
 }
 
-.link {
-  cursor: pointer;
-
-  &:hover,
-  &:active {
-    text-decoration: underline;
-  }
-}
-
 a:not(.q-item), .link {
   color: $anchor-color;
   text-decoration: none;
+
+  .body--dark & {
+    color: $anchor-color--dark;
+  }
+
   &:hover,
   &:active {
     text-decoration: underline;
@@ -128,24 +124,11 @@ a:not(.q-item), .link {
 
 .q-table th {
   font-size: 14px;
-  color: $grey-8;
-
-  .body--dark & {
-    color: $grey-3;
-  }
 }
 
 .q-table tbody td {
   font-size: 14px;
 }
-
-// td, .my-td  {
-//   color: $grey-7;
-
-//   .body--dark & {
-//     color: $grey-5;
-//   }
-// }
 
 .text-color-1 {
   color: $text-color-1 !important;
@@ -271,19 +254,19 @@ td,
   }
 }
 
+.my-gray-border {
+  border: 1px solid rgba($color: #000000, $alpha: .3);
+
+  .body--dark & {
+    border-color: rgba($color: #ffffff, $alpha: .3);
+  }
+}
+
 .black-white {
   color: #000;
   .body--dark & {
     color: #fff;
   }
-}
-
-.font-size-12 {
-  font-size: 12px;
-}
-.font-size-12--important {
-  font-size: 12px !important;
-  font-weight: 700 !important;
 }
 
 .px-38 {
