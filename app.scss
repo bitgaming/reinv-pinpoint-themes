@@ -39,6 +39,7 @@ body.body--dark {
 a:not(.q-item), .link {
   color: $anchor-color;
   text-decoration: none;
+  cursor: pointer;
 
   .body--dark & {
     color: $anchor-color--dark;
