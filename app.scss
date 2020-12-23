@@ -5,9 +5,15 @@
   src: url($mono-font-path)
 }
 
-body.body--dark {
-  color: var(--q-color-font-color--dark, #{$light});
-  background: var(--q-color-dark-page, #{$dark-page});
+body {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.body--dark {
+    color: var(--q-color-font-color--dark, #{$light});
+    background: var(--q-color-dark-page, #{$dark-page});
+  }
 }
 
 .custom-standout {
@@ -121,14 +127,6 @@ a:not(.q-item), .link {
 .roboto-mono--important {
   font-family: $mono-font-family !important;
   letter-spacing: -0.12px !important;
-}
-
-.q-table th {
-  font-size: 14px;
-}
-
-.q-table tbody td {
-  font-size: 14px;
 }
 
 .text-color-1 {
