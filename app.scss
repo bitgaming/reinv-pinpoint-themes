@@ -261,6 +261,14 @@ td,
   }
 }
 
+.half-hidden {
+  color: rgba($color: #000000, $alpha: .3);
+
+  .body--dark & {
+    color: rgba($color: #ffffff, $alpha: .3);
+  }
+}
+
 .black-white {
   color: #000;
   .body--dark & {
