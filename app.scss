@@ -178,8 +178,12 @@ a:not(.q-item), .link {
   gap: .6rem;
 }
 
-.bg-dark-page {
-  background-color: var(--q-color-dark-page, $dark-page);
+.bg-page {
+  background: #fff;
+
+  .body--dark & {
+    background-color: var(--q-color-dark-page, $dark-page);
+  }
 }
 
 .my-col-1 {
