@@ -178,7 +178,7 @@ a:not(.q-item), .link {
   gap: .6rem;
 }
 
-.q-tab-panels.q-dark {
+.bg-dark-page {
   background-color: var(--q-color-dark-page, $dark-page);
 }
 
@@ -258,6 +258,14 @@ td,
 
   .body--dark & {
     border-color: rgba($color: #ffffff, $alpha: .3);
+  }
+}
+
+.half-hidden {
+  color: rgba($color: #000000, $alpha: .3);
+
+  .body--dark & {
+    color: rgba($color: #ffffff, $alpha: .3);
   }
 }
 
