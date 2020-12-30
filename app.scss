@@ -202,7 +202,8 @@ a:not(.q-item), .link {
   width: 80%;
 }
 
-.bg-half-transparent {
+.bg-half-transparent, 
+.q-tabs {
   background: $bg-half-transparent !important;
 
   .body--dark & {
@@ -247,6 +248,7 @@ a:not(.q-item), .link {
 
 .my-btn.q-btn--outline .q-btn__wrapper:before,
 td,
+.q-tab,
 .my-gray {
   border-color: rgba($color: #000000, $alpha: .3);
   color: $grey-7;
