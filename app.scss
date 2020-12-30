@@ -258,18 +258,18 @@ td,
 }
 
 .my-gray-border {
-  border: 1px solid rgba($color: #000000, $alpha: .3);
+  border: 1px solid $separator-color;
 
   .body--dark & {
-    border-color: rgba($color: #ffffff, $alpha: .3);
+    border-color: $separator-dark-color;
   }
 }
 
-.half-hidden {
-  color: rgba($color: #000000, $alpha: .3);
+.my-gray-border-color {
+  border-color: $separator-color;
 
   .body--dark & {
-    color: rgba($color: #ffffff, $alpha: .3);
+    border-color: $separator-dark-color;
   }
 }
 
