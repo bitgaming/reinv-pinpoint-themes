@@ -1,4 +1,7 @@
 // app global css in SCSS form
+@import "mixins.scss";
+
+@include create-spacing-rules(38);
 
 @font-face{
   font-family: 'Roboto Mono';
@@ -182,8 +185,12 @@ a:not(.q-item), .link {
   background: #fff;
 
   .body--dark & {
-    background-color: var(--q-color-dark-page, $dark-page);
+    background: var(--q-color-dark-page, $dark-page);
   }
+}
+
+.bg-none {
+  background: none;
 }
 
 .my-col-1 {
@@ -204,15 +211,15 @@ a:not(.q-item), .link {
 
 .bg-half-transparent, 
 .q-tabs {
-  background: $bg-half-transparent !important;
+  background: $bg-half-transparent;
 
   .body--dark & {
-    background: $bg-half-transparent-dark !important;
+    background: $bg-half-transparent-dark;
   }
 }
 
 .bg-half-transparent--dark {
-  background: $bg-half-transparent-dark !important;
+  background: $bg-half-transparent-dark;
 }
 
 .my-primary {
@@ -282,58 +289,6 @@ td,
   }
 }
 
-.px-38 {
-  padding-left: 38px;
-  padding-right: 38px;
-}
-
-.pl-38 {
-  padding-left: 38px;
-}
-
-.pr-38 {
-  padding-right: 38px;
-}
-
-.py-38 {
-  padding-top: 38px;
-  padding-bottom: 38px;
-}
-
-.pt-38 {
-  padding-top: 38px;
-}
-
-.pb-38 {
-  padding-bottom: 38px;
-}
-
-.mx-38 {
-  margin-left: 38px;
-  margin-right: 38px;
-}
-
-.ml-38 {
-  margin-left: 38px;
-}
-
-.mr-38 {
-  margin-right: 38px;
-}
-
-.my-38 {
-  margin-top: 38px;
-  margin-bottom: 38px;
-}
-
-.mt-38 {
-  margin-top: 38px;
-}
-
-.mb-38 {
-  margin-bottom: 38px;
-}
-
 .min-height-unset {
   min-height: unset;
 }
@@ -362,4 +317,8 @@ td,
 
 .q-notification__message {
   overflow-wrap: break-word;
+}
+
+.q-badge {
+  padding: 4px 6px;
 }
