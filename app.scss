@@ -185,8 +185,12 @@ a:not(.q-item), .link {
   background: #fff;
 
   .body--dark & {
-    background-color: var(--q-color-dark-page, $dark-page);
+    background: var(--q-color-dark-page, $dark-page);
   }
+}
+
+.bg-none {
+  background: none;
 }
 
 .my-col-1 {
@@ -207,15 +211,15 @@ a:not(.q-item), .link {
 
 .bg-half-transparent, 
 .q-tabs {
-  background: $bg-half-transparent !important;
+  background: $bg-half-transparent;
 
   .body--dark & {
-    background: $bg-half-transparent-dark !important;
+    background: $bg-half-transparent-dark;
   }
 }
 
 .bg-half-transparent--dark {
-  background: $bg-half-transparent-dark !important;
+  background: $bg-half-transparent-dark;
 }
 
 .my-primary {
@@ -313,4 +317,8 @@ td,
 
 .q-notification__message {
   overflow-wrap: break-word;
+}
+
+.q-badge {
+  padding: 4px 6px;
 }
