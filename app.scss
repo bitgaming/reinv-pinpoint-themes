@@ -1,4 +1,7 @@
 // app global css in SCSS form
+@import "mixins.scss";
+
+@include create-spacing-rules(38);
 
 @font-face{
   font-family: 'Roboto Mono';
@@ -280,58 +283,6 @@ td,
   .body--dark & {
     color: #fff;
   }
-}
-
-.px-38 {
-  padding-left: 38px;
-  padding-right: 38px;
-}
-
-.pl-38 {
-  padding-left: 38px;
-}
-
-.pr-38 {
-  padding-right: 38px;
-}
-
-.py-38 {
-  padding-top: 38px;
-  padding-bottom: 38px;
-}
-
-.pt-38 {
-  padding-top: 38px;
-}
-
-.pb-38 {
-  padding-bottom: 38px;
-}
-
-.mx-38 {
-  margin-left: 38px;
-  margin-right: 38px;
-}
-
-.ml-38 {
-  margin-left: 38px;
-}
-
-.mr-38 {
-  margin-right: 38px;
-}
-
-.my-38 {
-  margin-top: 38px;
-  margin-bottom: 38px;
-}
-
-.mt-38 {
-  margin-top: 38px;
-}
-
-.mb-38 {
-  margin-bottom: 38px;
 }
 
 .min-height-unset {

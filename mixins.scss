@@ -1,0 +1,53 @@
+@mixin create-spacing-rules($size) {
+  .px-#{$size} {
+    padding-left: #{$size}px;
+    padding-right: #{$size}px;
+  }
+  
+  .pl-#{$size} {
+    padding-left: #{$size}px;
+  }
+  
+  .pr-#{$size} {
+    padding-right: #{$size}px;
+  }
+  
+  .py-#{$size} {
+    padding-top: #{$size}px;
+    padding-bottom: #{$size}px;
+  }
+  
+  .pt-#{$size} {
+    padding-top: #{$size}px;
+  }
+  
+  .pb-#{$size} {
+    padding-bottom: #{$size}px;
+  }
+  
+  .mx-#{$size} {
+    margin-left: #{$size}px;
+    margin-right: #{$size}px;
+  }
+  
+  .ml-#{$size} {
+    margin-left: #{$size}px;
+  }
+  
+  .mr-#{$size} {
+    margin-right: #{$size}px;
+  }
+  
+  .my-#{$size} {
+    margin-top: #{$size}px;
+    margin-bottom: #{$size}px;
+  }
+  
+  .mt-#{$size} {
+    margin-top: #{$size}px;
+  }
+  
+  .mb-#{$size} {
+    margin-bottom: #{$size}px;
+  }
+}
