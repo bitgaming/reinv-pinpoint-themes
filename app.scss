@@ -258,22 +258,6 @@ a:not(.q-item), .link {
   background: none;
 }
 
-.my-col-1 {
-  width: 20%;
-}
-
-.my-col-2 {
-  width: 40%;
-}
-
-.my-col-3 {
-  width: 60%;
-}
-
-.my-col-4 {
-  width: 80%;
-}
-
 .bg-half-transparent, 
 .q-tabs {
   background: $bg-half-transparent;
@@ -318,6 +302,11 @@ a:not(.q-item), .link {
   }
 }
 
+.px-md {
+  padding-left: map-get(map-get($spaces, "md"), "x") !important;
+  padding-right: map-get(map-get($spaces, "md"), "x") !important;
+}
+
 .my-btn.q-btn--outline .q-btn__wrapper:before,
 td,
 .q-tab,
@@ -328,6 +317,14 @@ td,
   .body--dark & {
     border-color: rgba($color: #ffffff, $alpha: .3);
     color: $grey-5;
+  }
+}
+
+.my-separator-bg {
+  background: $grey-6;
+
+  .body--dark & {
+    background: $grey-7;
   }
 }
 
