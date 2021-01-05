@@ -258,22 +258,6 @@ a:not(.q-item), .link {
   background: none;
 }
 
-.my-col-1 {
-  width: 20%;
-}
-
-.my-col-2 {
-  width: 40%;
-}
-
-.my-col-3 {
-  width: 60%;
-}
-
-.my-col-4 {
-  width: 80%;
-}
-
 .bg-half-transparent, 
 .q-tabs {
   background: $bg-half-transparent;
@@ -309,13 +293,18 @@ a:not(.q-item), .link {
 }
 
 .my-tab {
-  height: $breadcrumbs-height;
-  padding-left: map-get(map-get($spaces, "lg"), "x");
-  padding-right: map-get(map-get($spaces, "lg"), "x");
+  height: 50px;
+  padding-left: map-get(map-get($spaces, "md"), "x");
+  padding-right: map-get(map-get($spaces, "md"), "x");
 
   .q-tab__label {
     font-size: 16px;
   }
+}
+
+.px-md {
+  padding-left: map-get(map-get($spaces, "md"), "x") !important;
+  padding-right: map-get(map-get($spaces, "md"), "x") !important;
 }
 
 .my-btn.q-btn--outline .q-btn__wrapper:before,
@@ -328,6 +317,14 @@ td,
   .body--dark & {
     border-color: rgba($color: #ffffff, $alpha: .3);
     color: $grey-5;
+  }
+}
+
+.my-separator-bg {
+  background: $grey-6;
+
+  .body--dark & {
+    background: $grey-7;
   }
 }
 
@@ -390,4 +387,39 @@ td,
 
 .flex-row {
   flex-direction: row !important;
+}
+
+.q-btn.q-btn--dense {
+  .q-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.my-pagination {
+  height: 24px;
+  .q-field--auto-height.q-field--dense .q-field__control,
+  .q-field--auto-height.q-field--dense .q-field__native {
+    min-height: unset;
+    height: auto;
+    padding: none;
+  }
+
+  .q-field--dense .q-field__marginal {
+    height: 12px;
+  }
+
+  .q-field__native, .q-field__prefix, .q-field__suffix, .q-field__input {
+    padding: none;
+  }
+
+  .q-field--dense .q-field__control, .q-field--dense .q-field__marginal {
+    height: auto;
+  }
+
+  .rpp-label {
+    @media (max-width: $breakpoint-md-max) {
+      display: none;
+    }
+  }
 }
