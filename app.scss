@@ -388,3 +388,10 @@ td,
 .flex-row {
   flex-direction: row !important;
 }
+
+.q-btn.q-btn--dense {
+  .q-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
