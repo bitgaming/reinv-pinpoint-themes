@@ -73,6 +73,28 @@
   src: url($mono-font-path)
 }
 
+::-webkit-scrollbar {
+  cursor: grab;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: grab;
+  border-radius: 2.5px;
+  background-color: rgba($color: #000000, $alpha: .1);
+
+  .body--dark & {
+    background-color: rgba($color: #fff, $alpha: .1);
+  }
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+
 body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
