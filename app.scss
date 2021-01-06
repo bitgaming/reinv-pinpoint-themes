@@ -449,3 +449,44 @@ td,
 .filter-input {
   max-width: 120px;
 }
+
+.my-table-page {
+  --left-width: 0px;
+
+  .left {
+    display: none;
+    width: var(--left-width);
+    min-width: var(--left-width);
+    max-width: var(--left-width);
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 991;
+  }
+
+  .right {
+    width: calc(100vw - var(--left-width));
+    min-width: calc(100vw - var(--left-width));
+    max-width: calc(100vw - var(--left-width));
+    padding-bottom: map-get(map-get($spaces, "xl"), "y");
+  }
+
+  .mobile-btn-group {
+    position: fixed;
+    z-index: 2;
+    right: map-get(map-get($spaces, "sm"), "x");
+    bottom: map-get(map-get($spaces, "sm"), "y");
+  }
+
+  @media (min-width: $breakpoint-md-min) {
+    --left-width: 300px;
+    .left {
+      display: block;
+    }
+    .right {
+      padding-bottom: unset;
+    }
+    .mobile-btn-group {
+      display: none;
+    }
+  }
+}
