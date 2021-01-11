@@ -495,3 +495,19 @@ td,
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
+
+.flex-unset {
+  flex: unset;
+}
+
+.pl-sm {
+  padding-left: map-get(map-get($spaces, "sm"), "x") !important;
+}
+
+.pl-md {
+  padding-left: map-get(map-get($spaces, "md"), "x") !important;
+}
+
+.justify-start--important {
+  justify-content: flex-start !important;
+}
