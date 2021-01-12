@@ -282,10 +282,11 @@ a:not(.q-item), .link {
 
 .bg-half-transparent, 
 .q-tabs {
-  background: $bg-half-transparent;
+  // background: $bg-half-transparent;
 
   .body--dark & {
-    background: $bg-half-transparent-dark;
+    // background: $bg-half-transparent-dark;
+    background: var(--q-color-dark, #{$dark});
   }
 }
 
@@ -510,4 +511,17 @@ td,
 
 .justify-start--important {
   justify-content: flex-start !important;
+}
+
+.q-chip__icon--remove {
+  opacity: 0;
+  transition: opacity .3s ease;
+
+  .q-chip:hover & {
+    opacity: 1;
+  }
+}
+
+.body--dark .q-menu {
+  border: 1px solid $separator-dark-color;
 }
