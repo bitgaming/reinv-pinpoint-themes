@@ -282,10 +282,11 @@ a:not(.q-item), .link {
 
 .bg-half-transparent, 
 .q-tabs {
-  background: $bg-half-transparent;
+  // background: $bg-half-transparent;
 
   .body--dark & {
-    background: $bg-half-transparent-dark;
+    // background: $bg-half-transparent-dark;
+    background: var(--q-color-dark, #{$dark});
   }
 }
 
@@ -494,4 +495,33 @@ td,
 .border-bottom {
   border-bottom-style: solid;
   border-bottom-width: 1px;
+}
+
+.flex-unset {
+  flex: unset;
+}
+
+.pl-sm {
+  padding-left: map-get(map-get($spaces, "sm"), "x") !important;
+}
+
+.pl-md {
+  padding-left: map-get(map-get($spaces, "md"), "x") !important;
+}
+
+.justify-start--important {
+  justify-content: flex-start !important;
+}
+
+.q-chip__icon--remove {
+  opacity: 0;
+  transition: opacity .3s ease;
+
+  .q-chip:hover & {
+    opacity: 1;
+  }
+}
+
+.body--dark .q-menu {
+  border: 1px solid $separator-dark-color;
 }
