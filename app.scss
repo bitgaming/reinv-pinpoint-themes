@@ -100,7 +100,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  &.body--dark {
+  &.body--dark,
+  &.body--dark .q-menu .q-card,
+  &.body--dark .q-menu {
     color: var(--q-color-font-color--dark, #{$light});
     background: var(--q-color-dark-page, #{$dark-page});
   }
@@ -280,13 +282,12 @@ a:not(.q-item), .link {
   background: none;
 }
 
-.bg-half-transparent, 
-.q-tabs {
-  // background: $bg-half-transparent;
+.bg-half-transparent {
+  background: $bg-half-transparent;
 
   .body--dark & {
-    // background: $bg-half-transparent-dark;
-    background: var(--q-color-dark, #{$dark});
+    background: $bg-half-transparent-dark;
+    // background: var(--q-color-dark, #{$dark});
   }
 }
 
@@ -317,9 +318,12 @@ a:not(.q-item), .link {
 
 .my-tab {
   height: 50px;
-  padding-left: map-get(map-get($spaces, "md"), "x");
-  padding-right: map-get(map-get($spaces, "md"), "x");
 
+  &:not(.my-px) {
+    padding-left: map-get(map-get($spaces, "md"), "x");
+    padding-right: map-get(map-get($spaces, "md"), "x");
+  }
+  
   .q-tab__label {
     font-size: 16px;
   }
@@ -499,6 +503,10 @@ td,
 
 .flex-unset {
   flex: unset;
+}
+
+.pl-none {
+  padding-left: 0 !important;
 }
 
 .pl-sm {
