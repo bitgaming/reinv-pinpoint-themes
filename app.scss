@@ -528,6 +528,14 @@ td,
   padding-left: map-get(map-get($spaces, "md"), "x") !important;
 }
 
+.pr-sm {
+  padding-right: map-get(map-get($spaces, "sm"), "x") !important;
+}
+
+.pr-md {
+  padding-right: map-get(map-get($spaces, "md"), "x") !important;
+}
+
 .justify-start--important {
   justify-content: flex-start !important;
 }
