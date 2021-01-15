@@ -371,6 +371,15 @@ td,
   }
 }
 
+.my-gray-solid-shadow {
+  -webkit-box-shadow: 0px 0px 0px 1px $separator-color; 
+  box-shadow: 0px 0px 0px 1px $separator-color;
+
+  .body--dark & {
+    border-color: $separator-dark-color;
+  }
+}
+
 .black-white {
   color: #000;
   .body--dark & {
@@ -386,6 +395,7 @@ td,
   position: fixed;
   top: 0;
   background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
 }
 
 .q-table--dense .q-table td {
@@ -536,4 +546,8 @@ td,
 
 .bg-none {
   background: none !important;
+}
+
+.q-dialog__backdrop.fixed-full {
+  backdrop-filter: blur(2px);
 }
