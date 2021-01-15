@@ -396,6 +396,7 @@ td,
   top: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(2px);
+  z-index: 1999;
 }
 
 .q-table--dense .q-table td {
@@ -493,7 +494,7 @@ td,
   }
 
   @media (min-width: $breakpoint-md-min) {
-    --left-width: 300px;
+    --left-width: 280px;
     .left {
       display: block;
     }
