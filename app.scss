@@ -563,3 +563,10 @@ td,
 .q-dialog__backdrop.fixed-full {
   backdrop-filter: blur(2px);
 }
+
+.no-hover {
+  .q-table tbody td:before,
+  .q-table.q-table--dark tbody td:before {
+    background: none !important;
+  }
+}
