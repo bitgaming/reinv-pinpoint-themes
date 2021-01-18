@@ -543,7 +543,10 @@ td,
 .q-chip__icon--remove {
   opacity: 0;
   transition: opacity .3s ease;
-  color:var(--q-color-primary) !important;
+
+  .q-chip:not(.bg-primary) & {
+    color:var(--q-color-primary) !important;
+  }
 
   .q-chip:hover & {
     opacity: 1;
