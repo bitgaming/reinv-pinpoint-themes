@@ -574,3 +574,8 @@ td,
     background: none !important;
   }
 }
+
+// make the last breadcrumbs to be clickable
+.q-breadcrumbs--last a {
+  pointer-events: unset !important;
+}
