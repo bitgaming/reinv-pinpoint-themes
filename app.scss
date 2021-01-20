@@ -99,6 +99,7 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $grey-1;
 
   &.body--dark,
   &.body--dark .q-menu .q-card,
