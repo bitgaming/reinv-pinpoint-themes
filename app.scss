@@ -75,8 +75,8 @@
 
 ::-webkit-scrollbar {
   cursor: grab;
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   background: transparent;
 }
 
@@ -99,6 +99,7 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $grey-1;
 
   &.body--dark,
   &.body--dark .q-menu .q-card,
