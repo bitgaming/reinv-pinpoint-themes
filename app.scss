@@ -543,8 +543,9 @@ td,
   justify-content: flex-start !important;
 }
 
-.q-chip {
-  &:not(.q-chip--outline) {
+.q-chip,
+.q-badge {
+  &:not(.q-chip--outline):not(.q-badge--outline) {
     &.bg-positive {
       color: $positive;
       background: var(--q-color-positive-bg--half-transparent) !important;
