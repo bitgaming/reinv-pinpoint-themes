@@ -545,34 +545,38 @@ td,
 
 .q-chip,
 .q-badge {
-  &:not(.q-chip--outline):not(.q-badge--outline) {
-    &.bg-positive {
-      color: $positive;
-      background: var(--q-color-positive-bg--half-transparent) !important;
-    }
-
-    &.bg-negative {
-      color: $negative;
-      background: var(--q-color-negative-bg--half-transparent) !important;
-    }
-
-    &.bg-info {
-      color: $info;
-      background: var(--q-color-info-bg--half-transparent) !important;
-    }
-
-    &.bg-warning {
-      color: $warning;
-      background: var(--q-color-warning-bg--half-transparent) !important;
-    }
-
-    &.bg-accent {
-      color: $accent;
-      background: var(--q-color-accent-bg--half-transparent) !important;
-    }
+  &.bg-positive,
+  &.text-positive {
+    color: $positive;
+    border-color: rgba($color: $positive, $alpha: .4);
+    background: var(--q-color-positive-bg--half-transparent) !important;
   }
 
-  &.q-chip--outline::before {
+  &.bg-negative {
+    color: $negative;
+    border-color: rgba($color: $negative, $alpha: .4);
+    background: var(--q-color-negative-bg--half-transparent) !important;
+  }
+
+  &.bg-info {
+    color: $info;
+    border-color: rgba($color: $info, $alpha: .4);
+    background: var(--q-color-info-bg--half-transparent) !important;
+  }
+
+  &.bg-warning {
+    color: $warning;
+    border-color: rgba($color: $warning, $alpha: .4);
+    background: var(--q-color-warning-bg--half-transparent) !important;
+  }
+
+  &.bg-accent {
+    color: $accent;
+    border-color: rgba($color: $accent, $alpha: .4);
+    background: var(--q-color-accent-bg--half-transparent) !important;
+  }
+
+  @mixin transparent-before {
     content: '';
     position: absolute;
     top: 0;
@@ -581,6 +585,18 @@ td,
     right: 0;
     background-color: currentColor;
     opacity: .1;
+  }
+
+  &.q-chip--outline {
+    &::before {
+      border-radius: 12px;
+      @include transparent-before;
+    }
+
+    &.q-chip--square::before {
+      border-radius: 4px;
+      @include transparent-before;
+    }
   }
 }
 
