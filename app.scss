@@ -135,7 +135,8 @@ body {
   height: 0;
 }
 
-a:not(.q-item), .link {
+a:not(.q-item):not(.q-btn),
+.link {
   color: var(--q-color-anchor-color, #{$info});
   text-decoration: none;
   cursor: pointer;
