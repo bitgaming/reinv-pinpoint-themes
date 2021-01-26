@@ -75,8 +75,8 @@
 
 ::-webkit-scrollbar {
   cursor: grab;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: transparent;
 }
 
@@ -622,6 +622,7 @@ td,
 
 .bg-none {
   background: none !important;
+  background-color: transparent !important;
 }
 
 .q-dialog__backdrop.fixed-full {
