@@ -15,6 +15,18 @@
 $mono-font-path: '~assets/fonts/RobotoMono-VariableFont_wght.ttf';
 $mono-font-family: 'Roboto Mono';
 
+$light-blue      :#58A6FF;
+$light-blue-1    :rgb(173, 211, 255);
+$light-blue-2    :rgb(153, 201, 255);
+$light-blue-3    :rgb(133, 190, 255);
+$light-blue-4    :rgb(112, 179, 255);
+$light-blue-5    :#58A6FF;
+$light-blue-6    :rgb(71, 157, 255);
+$light-blue-7    :rgb(51, 146, 255);
+$light-blue-8    :rgb(31, 135, 255);
+$light-blue-9    :rgb(10, 124, 255);
+$light-blue-10   :rgb(0, 114, 245);
+
 $deep-purple     : #6202EE;
 $deep-purple-1   : #E8E8E8;
 $deep-purple-2   : #A8A5C6;
@@ -27,8 +39,10 @@ $deep-purple-8   : #3700B3;
 $deep-purple-9   : #1B1A3B;
 $deep-purple-10  : #190078;
 
-$primary         : #6202EE;
-$secondary       : #9E54FC;
+// $primary         : #6202EE;
+// $secondary       : #9E54FC;
+$primary         : #58A6FF;
+$secondary       : rgb(133, 190, 255);
 $accent      : #50E3C2;
 $accent-1    : #50E3C2;
 $accent-2    : #00C498;
