@@ -382,7 +382,8 @@ a:not(.q-item):not(.q-btn),
 .my-btn.q-btn--outline .q-btn__wrapper:before,
 td,
 .q-tab,
-.my-grey {
+.my-grey,
+.q-item__label--caption {
   border-color: rgba($color: #000000, $alpha: .3);
   color: $my-grey;
 
