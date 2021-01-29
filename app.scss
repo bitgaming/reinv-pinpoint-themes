@@ -3,6 +3,10 @@
 
 @include create-spacing-rules(38);
 
+.q-dark {
+  color: $my-color--dark;
+}
+
 .my-px {
   padding-left: map-get(map-get($spaces, "xs"), "x");
   padding-right: map-get(map-get($spaces, "xs"), "x");
@@ -386,7 +390,7 @@ td,
 .black-white {
   color: #000;
   .body--dark & {
-    color: #fff;
+    color: $my-color--dark;
   }
 }
 
