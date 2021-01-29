@@ -3,69 +3,71 @@
 
 @include create-spacing-rules(38);
 
-.my-px {
+.q-dark {
+  color: $my-color--dark;
+}
+
+@mixin my-padding-left--up-to-md {
   padding-left: map-get(map-get($spaces, "xs"), "x");
-  padding-right: map-get(map-get($spaces, "xs"), "x");
 
   @media (min-width: $breakpoint-sm-min) {
     padding-left: map-get(map-get($spaces, "sm"), "x");
-    padding-right: map-get(map-get($spaces, "sm"), "x");
   }
 
   @media (min-width: $breakpoint-md-min) {
     padding-left: map-get(map-get($spaces, "md"), "x");
+  }
+}
+
+@mixin my-padding-right--up-to-md {
+  padding-right: map-get(map-get($spaces, "xs"), "x");
+
+  @media (min-width: $breakpoint-sm-min) {
+    padding-right: map-get(map-get($spaces, "sm"), "x");
+  }
+
+  @media (min-width: $breakpoint-md-min) {
     padding-right: map-get(map-get($spaces, "md"), "x");
   }
+}
+
+.my-px {
+  @include my-padding-left--up-to-md;
+  @include my-padding-right--up-to-md;
 
   @media (min-width: $breakpoint-lg-min) {
     padding-left: map-get(map-get($spaces, "lg"), "x");
     padding-right: map-get(map-get($spaces, "lg"), "x");
-  }
-
-  @media (min-width: $breakpoint-xl-min) {
-    padding-left: map-get(map-get($spaces, "xl"), "x");
-    padding-right: map-get(map-get($spaces, "xl"), "x");
   }
 }
 
 .my-pl {
-  padding-left: map-get(map-get($spaces, "xs"), "x");
-
-  @media (min-width: $breakpoint-sm-min) {
-    padding-left: map-get(map-get($spaces, "sm"), "x");
-  }
-
-  @media (min-width: $breakpoint-md-min) {
-    padding-left: map-get(map-get($spaces, "md"), "x");
-  }
+  @include my-padding-left--up-to-md;
 
   @media (min-width: $breakpoint-lg-min) {
     padding-left: map-get(map-get($spaces, "lg"), "x");
   }
-
-  @media (min-width: $breakpoint-xl-min) {
-    padding-left: map-get(map-get($spaces, "xl"), "x");
-  }
 }
 
 .my-pr {
-  padding-right: map-get(map-get($spaces, "xs"), "x");
-
-  @media (min-width: $breakpoint-sm-min) {
-    padding-right: map-get(map-get($spaces, "sm"), "x");
-  }
-
-  @media (min-width: $breakpoint-md-min) {
-    padding-right: map-get(map-get($spaces, "md"), "x");
-  }
+  @include my-padding-right--up-to-md;
 
   @media (min-width: $breakpoint-lg-min) {
     padding-right: map-get(map-get($spaces, "lg"), "x");
   }
+}
 
-  @media (min-width: $breakpoint-xl-min) {
-    padding-right: map-get(map-get($spaces, "xl"), "x");
-  }
+.my-px-md {
+  @include my-padding-left--up-to-md;
+  @include my-padding-right--up-to-md;
+}
+
+.my-pl-md {
+  @include my-padding-left--up-to-md;
+}
+
+.my-pr-md {
+  @include my-padding-right--up-to-md;
 }
 
 @font-face{
@@ -135,15 +137,28 @@ body {
   height: 0;
 }
 
-a:not(.q-item):not(.q-btn),
-.link {
+@mixin link-color {
   color: var(--q-color-anchor-color, #{$info});
-  text-decoration: none;
-  cursor: pointer;
 
   .body--dark & {
     color: var(--q-color-anchor-color--dark, #{$info});
   }
+}
+
+.text-primary--link {
+  @include link-color;
+}
+
+a:not(.q-item):not(.q-btn),
+.link {
+  // color: var(--q-color-anchor-color, #{$info});
+  @include link-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  // .body--dark & {
+  //   color: var(--q-color-anchor-color--dark, #{$info});
+  // }
 
   &:hover,
   &:active {
@@ -339,7 +354,8 @@ a:not(.q-item):not(.q-btn),
 .my-btn.q-btn--outline .q-btn__wrapper:before,
 td,
 .q-tab,
-.my-grey {
+.my-grey,
+.q-item__label--caption {
   border-color: rgba($color: #000000, $alpha: .3);
   color: $my-grey;
 
@@ -383,10 +399,12 @@ td,
   }
 }
 
-.black-white {
+.black-white,
+.q-list--dark,
+.q-item--dark {
   color: #000;
   .body--dark & {
-    color: #fff;
+    color: $my-color--dark;
   }
 }
 
@@ -547,33 +565,52 @@ td,
 .q-badge {
   &.bg-positive,
   &.text-positive {
-    color: $positive;
-    border-color: rgba($color: $positive, $alpha: .4);
+    color: var(--q-color-positive);
+    border-color: var(--q-color-positive-border--half-transparent);
     background: var(--q-color-positive-bg--half-transparent) !important;
+    &::before {
+      background-color: transparent !important;
+    }
   }
 
-  &.bg-negative {
-    color: $negative;
-    border-color: rgba($color: $negative, $alpha: .4);
+  &.bg-negative,
+  &.text-negative {
+    color: var(--q-color-negative);
+    border-color: var(--q-color-negative-border--half-transparent);
     background: var(--q-color-negative-bg--half-transparent) !important;
+    &::before {
+      background-color: transparent !important;
+    }
   }
 
-  &.bg-info {
-    color: $info;
-    border-color: rgba($color: $info, $alpha: .4);
+  &.bg-info,
+  &.text-info {
+    color: var(--q-color-info);
+    border-color: var(--q-color-info-border--half-transparent);
     background: var(--q-color-info-bg--half-transparent) !important;
+    &::before {
+      background-color: transparent !important;
+    }
   }
 
-  &.bg-warning {
-    color: $warning;
-    border-color: rgba($color: $warning, $alpha: .4);
+  &.bg-warning,
+  &.text-warning {
+    color: var(--q-color-warning);
+    border-color: var(--q-color-warning-border--half-transparent);
     background: var(--q-color-warning-bg--half-transparent) !important;
+    &::before {
+      background-color: transparent !important;
+    }
   }
 
-  &.bg-accent {
-    color: $accent;
-    border-color: rgba($color: $accent, $alpha: .4);
+  &.bg-accent,
+  &.text-accent {
+    color: var(--q-color-accent);
+    border-color: var(--q-color-accent-border--half-transparent);
     background: var(--q-color-accent-bg--half-transparent) !important;
+    &::before {
+      background-color: transparent !important;
+    }
   }
 
   @mixin transparent-before {
