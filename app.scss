@@ -178,16 +178,6 @@ a:not(.q-item):not(.q-btn),
   word-wrap: break-word;
 }
 
-// custom vue-json-pretty style
-.vjs-tree.is-mouseover {
-  .body--dark & {
-    background-color: $grey-9;
-  }
-}
-.vjs-tree {
-  font-size: 12px !important;
-}
-
 .q-drawer--on-top {
   z-index: 2999;
 }
