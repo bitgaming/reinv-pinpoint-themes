@@ -31,6 +31,22 @@
   }
 }
 
+@mixin my-padding-left--sm-to-md {
+  padding-left: map-get(map-get($spaces, "sm"), "x");
+
+  @media (min-width: $breakpoint-md-min) {
+    padding-left: map-get(map-get($spaces, "md"), "x");
+  }
+}
+
+@mixin my-padding-right--sm-to-md {
+  padding-right: map-get(map-get($spaces, "sm"), "x");
+
+  @media (min-width: $breakpoint-md-min) {
+    padding-right: map-get(map-get($spaces, "md"), "x");
+  }
+}
+
 .my-px {
   @include my-padding-left--up-to-md;
   @include my-padding-right--up-to-md;
@@ -57,17 +73,30 @@
   }
 }
 
-.my-px-md {
+.my-px-xs-md {
   @include my-padding-left--up-to-md;
   @include my-padding-right--up-to-md;
+}
+
+.my-pl-xs-md {
+  @include my-padding-left--up-to-md;
+}
+
+.my-pr-xs-md {
+  @include my-padding-right--up-to-md;
+}
+
+.my-px-sm-md {
+  @include my-padding-left--sm-to-md;
+  @include my-padding-right--sm-to-md;
 }
 
 .my-pl-md {
-  @include my-padding-left--up-to-md;
+  @include my-padding-left--sm-to-md;
 }
 
 .my-pr-md {
-  @include my-padding-right--up-to-md;
+  @include my-padding-right--sm-to-md;
 }
 
 @font-face{
