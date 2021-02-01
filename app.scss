@@ -582,6 +582,16 @@ td,
 
 .q-chip,
 .q-badge {
+  &.bg-primary,
+  &.text-primary {
+    @include link-color;
+    border-color: var(primary-border--dark);
+    background: var(--q-color-primary-bg--half-transparent) !important;
+    &::before {
+      background-color: transparent !important;
+    }
+  }
+
   &.bg-positive,
   &.text-positive {
     color: var(--q-color-positive);
