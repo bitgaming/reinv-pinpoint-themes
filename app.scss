@@ -519,10 +519,17 @@ td,
     z-index: 991;
   }
 
-  .right {
+  .left-drawer--overlay & .right {
     width: calc(100vw - var(--left-width));
     min-width: calc(100vw - var(--left-width));
     max-width: calc(100vw - var(--left-width));
+    padding-bottom: map-get(map-get($spaces, "xl"), "y");
+  }
+
+  .left-drawer--opened:not(.left-drawer--overlay) & .right {
+    width: calc(100vw - calc( 2 * var(--left-width)));
+    min-width: calc(100vw - calc( 2 * var(--left-width)));
+    max-width: calc(100vw - calc( 2 * var(--left-width)));
     padding-bottom: map-get(map-get($spaces, "xl"), "y");
   }
 
