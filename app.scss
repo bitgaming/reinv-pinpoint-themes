@@ -8,42 +8,42 @@
 }
 
 @mixin my-padding-left--up-to-md {
-  padding-left: map-get(map-get($spaces, "xs"), "x");
+  padding-left: map-get(map-get($spaces, "xs"), "x") !important;
 
   @media (min-width: $breakpoint-sm-min) {
-    padding-left: map-get(map-get($spaces, "sm"), "x");
+    padding-left: map-get(map-get($spaces, "sm"), "x") !important;
   }
 
   @media (min-width: $breakpoint-md-min) {
-    padding-left: map-get(map-get($spaces, "md"), "x");
+    padding-left: map-get(map-get($spaces, "md"), "x") !important;
   }
 }
 
 @mixin my-padding-right--up-to-md {
-  padding-right: map-get(map-get($spaces, "xs"), "x");
+  padding-right: map-get(map-get($spaces, "xs"), "x") !important;
 
   @media (min-width: $breakpoint-sm-min) {
-    padding-right: map-get(map-get($spaces, "sm"), "x");
+    padding-right: map-get(map-get($spaces, "sm"), "x") !important;
   }
 
   @media (min-width: $breakpoint-md-min) {
-    padding-right: map-get(map-get($spaces, "md"), "x");
+    padding-right: map-get(map-get($spaces, "md"), "x") !important;
   }
 }
 
 @mixin my-padding-left--sm-to-md {
-  padding-left: map-get(map-get($spaces, "sm"), "x");
+  padding-left: map-get(map-get($spaces, "sm"), "x") !important;
 
   @media (min-width: $breakpoint-md-min) {
-    padding-left: map-get(map-get($spaces, "md"), "x");
+    padding-left: map-get(map-get($spaces, "md"), "x") !important;
   }
 }
 
 @mixin my-padding-right--sm-to-md {
-  padding-right: map-get(map-get($spaces, "sm"), "x");
+  padding-right: map-get(map-get($spaces, "sm"), "x") !important;
 
   @media (min-width: $breakpoint-md-min) {
-    padding-right: map-get(map-get($spaces, "md"), "x");
+    padding-right: map-get(map-get($spaces, "md"), "x") !important;
   }
 }
 
@@ -52,8 +52,8 @@
   @include my-padding-right--up-to-md;
 
   @media (min-width: $breakpoint-lg-min) {
-    padding-left: map-get(map-get($spaces, "lg"), "x");
-    padding-right: map-get(map-get($spaces, "lg"), "x");
+    padding-left: map-get(map-get($spaces, "lg"), "x") !important;
+    padding-right: map-get(map-get($spaces, "lg"), "x") !important;
   }
 }
 
@@ -61,7 +61,7 @@
   @include my-padding-left--up-to-md;
 
   @media (min-width: $breakpoint-lg-min) {
-    padding-left: map-get(map-get($spaces, "lg"), "x");
+    padding-left: map-get(map-get($spaces, "lg"), "x") !important;
   }
 }
 
@@ -69,7 +69,7 @@
   @include my-padding-right--up-to-md;
 
   @media (min-width: $breakpoint-lg-min) {
-    padding-right: map-get(map-get($spaces, "lg"), "x");
+    padding-right: map-get(map-get($spaces, "lg"), "x") !important;
   }
 }
 
@@ -91,11 +91,11 @@
   @include my-padding-right--sm-to-md;
 }
 
-.my-pl-md {
+.my-pl-sm-md {
   @include my-padding-left--sm-to-md;
 }
 
-.my-pr-md {
+.my-pr-sm-md {
   @include my-padding-right--sm-to-md;
 }
 
