@@ -247,6 +247,15 @@ a:not(.q-item):not(.q-btn),
   }
 }
 
+// because we have more customer items in dense table that having heights more than the default dense height
+// such as UA item and Country item, might as well just increase the default height more instead of decreasing sizes of their icons
+.q-table--dense .q-table {
+  tbody tr,
+  tbody td {
+    height: 37px;
+  }
+}
+
 .roboto-mono {
   font-family: $mono-font-family;
   letter-spacing: -0.12px;
