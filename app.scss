@@ -734,3 +734,23 @@ td,
 .q-table tbody td {
   font-size: 14px;
 }
+
+.my-side-tabs-wrapper {
+  width: 180px;
+  flex-shrink: 0;
+
+  .tabs {
+    padding-top: 28px;
+
+    .q-tab__label {
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &--mini {
+    width: 120px;
+  }
+}
