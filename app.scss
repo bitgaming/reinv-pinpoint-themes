@@ -3,6 +3,17 @@
 
 @include create-spacing-rules(38);
 
+@mixin my-grey {
+  border-color: rgba($color: #000000, $alpha: .3);
+  color: $my-grey;
+
+  .body--dark & {
+    border-color: rgba($color: #ffffff, $alpha: .3);
+    // color: $grey-5;
+    color: $my-grey--dark;
+  }
+}
+
 .q-dark {
   color: $my-color--dark;
 }
@@ -384,14 +395,15 @@ td,
 .q-tab,
 .my-grey,
 .q-item__label--caption {
-  border-color: rgba($color: #000000, $alpha: .3);
-  color: $my-grey;
+  @include my-grey;
+  // border-color: rgba($color: #000000, $alpha: .3);
+  // color: $my-grey;
 
-  .body--dark & {
-    border-color: rgba($color: #ffffff, $alpha: .3);
-    // color: $grey-5;
-    color: $my-grey--dark;
-  }
+  // .body--dark & {
+  //   border-color: rgba($color: #ffffff, $alpha: .3);
+  //   // color: $grey-5;
+  //   color: $my-grey--dark;
+  // }
 }
 
 .my-separator-bg {
@@ -653,6 +665,16 @@ td,
     color: var(--q-color-accent);
     border-color: var(--q-color-accent-border--half-transparent);
     background: var(--q-color-accent-bg--half-transparent) !important;
+    &::before {
+      background-color: transparent !important;
+    }
+  }
+
+  &.my-grey.my-grey-chip {
+    @include my-grey;
+    // color: var(--q-color-accent);
+    // border-color: var(--q-color-accent-border--half-transparent);
+    background: rgba($color: $my-grey, $alpha: .1) !important;
     &::before {
       background-color: transparent !important;
     }
