@@ -781,3 +781,12 @@ td,
 .max-w-500 {
   max-width: 500px;
 }
+
+// Forcing black text when yellow theme picked
+// to improve contrast
+.text-black-for-bg-primary {
+  .bg-primary,
+  .q-btn.no-outline.bg-primary {
+    color: #000 !important;
+  }
+}
