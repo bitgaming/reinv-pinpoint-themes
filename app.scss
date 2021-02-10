@@ -573,6 +573,14 @@ td,
     .mobile-btn-group {
       display: none;
     }
+
+    .left-drawer--overlay & .right {
+      padding-bottom: unset;
+    }
+  
+    .left-drawer--opened:not(.left-drawer--overlay) & .right {
+      padding-bottom: unset;
+    }
   }
 }
 
