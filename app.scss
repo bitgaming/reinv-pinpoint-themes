@@ -793,7 +793,7 @@ td,
 // Forcing black text when yellow theme picked
 // to improve contrast
 .text-black-for-bg-primary {
-  .bg-primary,
+  .bg-primary:not(.id--half-transparent):not(.q-chip),
   .q-btn.no-outline.bg-primary {
     color: #000 !important;
   }
