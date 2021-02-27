@@ -794,7 +794,8 @@ td,
 // to improve contrast
 .text-black-for-bg-primary {
   .bg-primary:not(.id--half-transparent):not(.q-chip),
-  .q-btn.no-outline.bg-primary {
+  .q-btn.no-outline.bg-primary,
+  .q-badge:not(.q-badge--outline):not(.id--half-transparent):not(.text-primary--link):not(.my-grey) {
     color: #000 !important;
   }
 }
