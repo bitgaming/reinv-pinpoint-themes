@@ -805,3 +805,29 @@ td,
     color: #000 !important;
   }
 }
+
+.q-chip__icon--remove {
+  margin-right: auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+  -webkit-text-fill-color: #000;
+  .body--dark & {
+    -webkit-text-fill-color: #fff;
+  }
+
+  -webkit-box-shadow: 0 0 0 1000px $dark inset !important;
+  transition: background-color 300ms ease-in-out 0s;
+}
+.q-field--outlined .q-field__control:before {
+  z-index: 1;
+}
