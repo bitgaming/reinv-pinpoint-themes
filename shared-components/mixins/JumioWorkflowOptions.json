@@ -1,0 +1,8 @@
+[
+  { "id": 100, "label": "ID. Camera + Upload", "value": "ID_ONLY_CAMERA_AND_UPLOAD" },
+  { "id": 101, "label": "ID. Camera", "value": "ID_ONLY_CAMERA_ONLY" },
+  { "id": 102, "label": "ID. Upload", "value": "ID_ONLY_UPLOAD_ONLY" },
+  { "id": 200, "label": "ID + Identiy. Camera + Upload", "value": "ID_AND_IDENTITY_CAMERA_AND_UPLOAD" },
+  { "id": 201, "label": "ID + Identiy. Camera", "value": "ID_AND_IDENTITY_CAMERA_ONLY" },
+  { "id": 202, "label": "ID + Identiy. Upload", "value": "ID_AND_IDENTITY_UPLOAD_ONLY" }
+]
