@@ -136,7 +136,7 @@ export default {
       type: Boolean,
       default: false
     },
-    tp: {
+    to: {
       type: String,
       default: ''
     }
