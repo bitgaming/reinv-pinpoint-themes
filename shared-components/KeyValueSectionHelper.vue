@@ -12,7 +12,15 @@
     </template>
 
     <template v-else-if="valType === 'id'">
-      <id v-if="value" :id="value" :copyBtn="false" :outline="false" />
+      <id
+        v-if="value"
+        :id="value"
+        :copyBtn="false"
+        :outline="false"
+        v-bind="{
+          ...(to ? { to } : {})
+        }"
+      />
       <div v-else-if="!editable" class="my-grey">-</div>
     </template>
 
@@ -127,6 +135,10 @@ export default {
     tooltipMode: {
       type: Boolean,
       default: false
+    },
+    tp: {
+      type: String,
+      default: ''
     }
   }
 }
