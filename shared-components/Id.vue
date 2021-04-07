@@ -29,7 +29,7 @@
                 'link': !!to,
                 'no-border': !border,
                 'my-grey': outline && !to,
-                'id--half-transparent text-primary--link': !outline && !to,
+                'id--half-transparent text-primary--link': !outline,
               },
               classes
             ]"
