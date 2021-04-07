@@ -50,7 +50,8 @@
               sideBadgeClasses,
               sideHideCountryCode,
               sideTooltipMode,
-              hideSideParenthesis
+              hideSideParenthesis,
+              to
             }, i) in data"
             :key="i"
             :class="['q-py-sm', 'my-pr-md', 'item']"
@@ -77,6 +78,7 @@
                   :hideCountryCode="hideCountryCode"
                   :badgeClasses="valBadgeClasses"
                   :tooltip-mode="tooltipMode"
+                  :to="to"
                 />
 
                 <div v-if="sideValue" :class="['row', 'items-center', 'q-ml-xs', sideValueClass]">

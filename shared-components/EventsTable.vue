@@ -85,6 +85,9 @@
               :border="false"
               :classes="`pl-none ellipsis ${!noMaxWidth ? 'max-w-500' : ''} ${col.classes}`"
               :copy-btn="col.copyBtn"
+              v-bind="{
+                ...(col.to ? { to: typeof col.to === 'function' ? col.to(col.value) : col.to } : {})
+              }"
             />
 
             <delay-linear-progress

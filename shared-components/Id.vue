@@ -15,7 +15,11 @@
           { 'cursor-pointer': to, }
         ]"
       >
-        <component :is="to ? 'router-link' : 'div'" :to="to" class="row no-wrap">
+        <component
+          :is="to ? 'router-link' : 'div'"
+          :to="to"
+          class="row no-wrap"
+        >
           <q-badge
             :outline="outline"
             :label="id"
