@@ -828,6 +828,15 @@ select:-webkit-autofill:focus {
 
   transition: background-color 300ms ease-in-out 0s;
 }
+
+.q-input.q-field--standard {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    margin-bottom: 0.5px;
+  }
+}
+
 .q-field--outlined .q-field__control:before {
   z-index: 1;
 }
