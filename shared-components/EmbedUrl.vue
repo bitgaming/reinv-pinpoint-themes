@@ -55,6 +55,7 @@ export default {
   height: 100%;
   width: 100%;
   overflow-x: auto;
+  position: relative;
 
   // &:hover {
   //   .copy-btn {
@@ -64,9 +65,9 @@ export default {
 
   .copy-btn {
     position: absolute;
-    right: 25px;
-    top: 25px;
-    opacity: 1;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
     transition: opacity .3s ease-in-out;
   }
 }
