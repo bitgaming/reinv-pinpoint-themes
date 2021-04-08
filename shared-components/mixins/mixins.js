@@ -82,14 +82,20 @@ export const thumbStyle = {
 
 export const formatNumber = {
   methods: {
-    formatNumber (num, dp = 2) {
-      // const str = num.toString()
+    formatNumber (num) {
       try {
-        const str = Number(num).toFixed(dp)
+        const str = num.toString()
+        return this.formatNumberStr(str)
+      } catch {
+        return num
+      }
+    },
+    formatNumberStr (str) {
+      try {
         const [pt1, pt2] = str.split('.')
         return `${pt1.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}${pt2 ? `.${pt2}` : ''}`
       } catch {
-        return num
+        return str
       }
     },
     kFormatter (num, dp = 0) {
