@@ -382,3 +382,15 @@ export const linkAffiliate = {
     }
   }
 }
+
+export const visibleColumnsHelper = {
+  methods: {
+    getSavedVersionedVisCols (name) {
+      const colStr = localStorage.getItem(`${name}_${process.env.VERSION}`)
+      return colStr ? colStr.split(',') : null
+    },
+    saveVersionedVisCols (name, cols) {
+      localStorage.setItem(`${name}_${process.env.VERSION}`, cols)
+    }
+  }
+}
