@@ -53,7 +53,6 @@ export default {
 
 .embed-wrapper {
   height: 100%;
-  width: 100%;
   overflow-x: auto;
   position: relative;
 
