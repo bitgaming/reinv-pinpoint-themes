@@ -82,8 +82,9 @@ export const thumbStyle = {
 
 export const formatNumber = {
   methods: {
-    formatNumber (num) {
-      const str = num.toString()
+    formatNumber (num, dp = 8) {
+      // const str = num.toString()
+      const str = num.toFixed(dp)
       const [pt1, pt2] = str.split('.')
       return `${pt1.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}${pt2 ? `.${pt2}` : ''}`
     },
