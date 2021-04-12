@@ -355,6 +355,14 @@ export const util = {
       }
 
       return null
+    },
+    updateQuery (json) {
+      try {
+        const query = btoa(encodeURIComponent(JSON.stringify(json)))
+        this.$router.push(`?q=${query}`, () => {})
+      } catch (err) {
+        console.error(err)
+      }
     }
   }
 }
