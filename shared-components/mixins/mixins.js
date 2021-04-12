@@ -344,6 +344,17 @@ export const util = {
       } catch {
         return false
       }
+    },
+    getJsonFromQuery (query) {
+      if (query) {
+        try {
+          return JSON.parse(decodeURIComponent(atob(query)))
+        } catch {
+          return null
+        }
+      }
+
+      return null
     }
   }
 }
