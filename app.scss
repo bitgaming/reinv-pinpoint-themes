@@ -844,3 +844,8 @@ select:-webkit-autofill:focus {
 .max-width-1200 {
   max-width: 1200px;
 }
+
+.q-scrollarea__bar,
+.q-scrollarea__thumb {
+  z-index: 2;
+}
