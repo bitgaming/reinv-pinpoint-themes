@@ -156,7 +156,7 @@ import { thumbStyle } from 'shared-components/mixins/mixins'
 export default {
   mixins: [thumbStyle],
   components: {
-    DatetimeInput: () => import('components/DatetimeInput.vue')
+    DatetimeInput: () => import('shared-components/DatetimeInput.vue')
   },
   props: {
     filters: {
