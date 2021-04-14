@@ -165,7 +165,7 @@ export default {
   name: 'FormBuilder',
   mixins: [util],
   components: {
-    DatetimeInput: () => import('components/DatetimeInput.vue')
+    DatetimeInput: () => import('shared-components/DatetimeInput.vue')
   },
   props: {
     loading: {
